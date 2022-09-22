@@ -15,7 +15,8 @@ import {
   FormHelperText,
 } from '@chakra-ui/react';
 import { FC, useState, ChangeEvent } from 'react';
-import { toMetaplexFileFromBrowser, UploadMetadataOutput } from '@metaplex-foundation/js';
+ // toMetaplexFileFromBrowser
+import { UploadMetadataOutput } from '@metaplex-foundation/js';
 
 import { Metaplex, bundlrStorage, walletAdapterIdentity } from '@metaplex-foundation/js';
 import { useWallet } from '@solana/wallet-adapter-react';
