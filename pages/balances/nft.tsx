@@ -6,6 +6,7 @@ import Moralis from 'moralis';
 import { SolNFTBalances } from 'components/templates/balances/SolNFT';
 
 const NFT: NextPage<ISolNFTBalances> = (props) => {
+  console.log('PROPS', props);
   return (
     <Default pageName="NFT Balances">
       <SolNFTBalances {...props} />
@@ -27,11 +28,18 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     network: process.env.APP_CHAIN_ID,
   });
 
+  const portfolio = await Moralis.SolApi.account.getPortfolio({
+    address: session?.user.address,
+    network: process.env.APP_CHAIN_ID
+  });
+
+
   // (balances.result).filter((balance)=> balance.result.)
 
   return {
     props: {
       balances: JSON.parse(JSON.stringify(balances.result)),
+      portfolio: JSON.parse(JSON.stringify(portfolio))
     },
   };
 };

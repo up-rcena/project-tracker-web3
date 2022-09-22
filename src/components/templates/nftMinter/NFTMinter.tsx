@@ -16,9 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { FC, useState, ChangeEvent } from 'react';
  // toMetaplexFileFromBrowser
-import { UploadMetadataOutput } from '@metaplex-foundation/js';
-
-import { Metaplex, bundlrStorage, walletAdapterIdentity } from '@metaplex-foundation/js';
+import { Metaplex, bundlrStorage, walletAdapterIdentity, UploadMetadataOutput } from '@metaplex-foundation/js';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { Connection, clusterApiUrl } from '@solana/web3.js';
 import apiPost from 'utils/apiPost';

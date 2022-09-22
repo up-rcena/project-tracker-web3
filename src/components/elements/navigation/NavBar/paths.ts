@@ -26,15 +26,15 @@ const NAV_LINKS: ISubNav[] = [
   // }, // End Transfer
   {
     label: 'Balances',
-    href: '/balances',
-    children: [
-      {
-        label: 'NFT',
-        subLabel: 'Get your NFT balances',
-        href: '/balances/nft',
-        logo: 'pack',
-      },
-    ],
+    href: '/balances/nft',
+    // children: [
+    //   {
+    //     label: 'NFT',
+    //     subLabel: 'Get your NFT balances',
+    //     href: '/balances/nft',
+    //     logo: 'pack',
+    //   },
+    // ],
   },
   {
     label: 'NFT Minter',
